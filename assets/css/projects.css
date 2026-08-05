@@ -1,0 +1,164 @@
+/* ===================================================================
+   PROJECTS PAGE — projects.css
+   Styles specific to projects.html
+=================================================================== */
+
+/* ---- Hero ---- */
+.hero.sub-hero.bg-projects {
+  background-image: url("../images/img4.jpeg");
+}
+
+/* ---- Projects Section ---- */
+.projects-page {
+  padding: 0 0 100px;
+}
+
+/* Dark intro header strip */
+.projects-intro-strip {
+  background: var(--charcoal);
+  padding: 60px 32px 48px;
+  border-bottom: 3px solid var(--logo-red);
+  margin-bottom: 0;
+}
+
+.projects-intro-strip .section-tag {
+  color: rgba(247, 244, 236, 0.45);
+  margin-bottom: 16px;
+}
+
+.projects-intro-strip h2 {
+  color: var(--paper);
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  margin: 0;
+  max-width: 22ch;
+  line-height: 1.2;
+}
+
+/* Projects Table */
+.projects-table-wrap {
+  margin-bottom: 60px;
+  overflow-x: auto;
+}
+
+.projects-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14.5px;
+}
+
+.projects-table thead tr {
+  background: var(--charcoal-2);
+  color: var(--paper);
+}
+
+.projects-table th {
+  padding: 16px 20px;
+  text-align: left;
+  font-family: var(--f-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: rgba(247, 244, 236, 0.5);
+  white-space: nowrap;
+}
+
+.projects-table td {
+  padding: 18px 20px;
+}
+
+.projects-table td.sr {
+  font-family: var(--f-mono);
+  color: var(--logo-red);
+  font-size: 13px;
+}
+
+.projects-table td.location,
+.projects-table td.scope {
+  color: var(--charcoal-soft);
+}
+
+.projects-table td.year {
+  font-family: var(--f-mono);
+  font-size: 13px;
+}
+
+/* Alternating row colors */
+.projects-table tbody tr:nth-child(odd) {
+  background: var(--paper);
+  border-bottom: 1px solid var(--line);
+}
+
+.projects-table tbody tr:nth-child(even) {
+  background: var(--plaster);
+  border-bottom: 1px solid var(--line);
+}
+
+/* Metrics cards */
+.projects-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  background: var(--line);
+  margin-bottom: 50px;
+}
+
+.metric-card {
+  padding: 36px 28px;
+}
+
+.metric-card.dark {
+  background: var(--charcoal);
+}
+
+.metric-card.accent {
+  background: var(--logo-red);
+}
+
+.metric-card-label {
+  font-family: var(--f-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.metric-card.dark .metric-card-label {
+  color: var(--logo-red);
+}
+
+.metric-card.accent .metric-card-label {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.metric-card p {
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.metric-card.dark p {
+  color: rgba(247, 244, 236, 0.75);
+}
+
+.metric-card.accent p {
+  color: #fff;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 980px) {
+  .projects-metrics {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+}
+
+@media (max-width: 640px) {
+  .projects-intro-strip {
+    padding: 40px 20px 32px;
+  }
+
+  .projects-table-wrap {
+    margin-bottom: 32px;
+  }
+}

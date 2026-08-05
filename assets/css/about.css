@@ -1,0 +1,291 @@
+/* ===================================================================
+   ABOUT US PAGE — about.css
+   Styles specific to about-us.html
+=================================================================== */
+
+/* ---- Hero ---- */
+.hero.sub-hero.bg-about {
+  background-image: url("../images/img15.jpeg");
+}
+
+/* ---- About Content Section ---- */
+.about {
+  padding: 60px 0 100px;
+}
+
+.about-inner {
+  display: grid;
+  grid-template-columns: 1.3fr 0.9fr;
+  gap: 70px;
+  align-items: start;
+}
+
+.about-figure {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.about-img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 1px solid var(--line);
+  box-shadow: 0 20px 40px -15px rgba(34, 31, 28, 0.12);
+  transition: transform 0.3s ease;
+}
+
+.about-img:hover {
+  transform: scale(1.015);
+}
+
+.about-text h2 {
+  font-size: clamp(1.8rem, 2.6vw, 2.5rem);
+  line-height: 1.18;
+  margin-bottom: 24px;
+  max-width: 16ch;
+}
+
+.about-text p {
+  color: var(--charcoal-soft);
+  max-width: 56ch;
+  margin-bottom: 16px;
+}
+
+.figure-frame {
+  border: 1px solid var(--line);
+  padding: 40px 32px;
+  position: relative;
+  background: var(--paper);
+}
+
+.figure-frame::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: 14px;
+  height: 14px;
+  border-top: 2px solid var(--logo-red);
+  border-left: 2px solid var(--logo-red);
+}
+
+.figure-frame::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  right: -1px;
+  width: 14px;
+  height: 14px;
+  border-bottom: 2px solid var(--logo-red);
+  border-right: 2px solid var(--logo-red);
+}
+
+.figure-num {
+  font-family: var(--f-display);
+  font-size: 4.5rem;
+  color: var(--logo-red);
+  line-height: 1;
+  margin-bottom: 14px;
+}
+
+.figure-cap {
+  font-size: 14px;
+  color: var(--charcoal-soft);
+  max-width: 24ch;
+}
+
+.commitment-quote {
+  font-family: var(--f-display);
+  font-size: 1.3rem;
+  margin: 0 0 8px;
+}
+
+.commitment-sub {
+  font-size: 13.5px;
+  color: var(--charcoal-soft);
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* ---- Blueprint / Vision & Mission ---- */
+.blueprint {
+  padding: 100px 0;
+  background: var(--charcoal);
+  color: var(--paper);
+}
+
+.blueprint .section-tag {
+  color: rgba(247, 244, 236, 0.75);
+  letter-spacing: 0.12em;
+}
+
+.blueprint-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.blueprint-card {
+  background: var(--charcoal-2);
+  padding: 44px 40px;
+  position: relative;
+  color: var(--paper);
+}
+
+.bp-corner {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--logo-red-dark);
+}
+
+.bp-icon-wrap {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: rgba(208, 28, 36, 0.08);
+  border: 1px solid rgba(208, 28, 36, 0.16);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--logo-red);
+  font-size: 20px;
+  margin-bottom: 20px;
+  transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+}
+
+.blueprint-card:hover .bp-icon-wrap {
+  background: var(--logo-red);
+  color: var(--paper);
+  border-color: var(--logo-red);
+  transform: translateY(-2px);
+}
+
+.blueprint-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 16px;
+  color: var(--paper);
+}
+
+.blueprint-card p {
+  color: rgba(247, 244, 236, 0.7);
+  margin-bottom: 14px;
+  line-height: 1.6;
+}
+
+.bp-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.bp-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 14.5px;
+  color: rgba(247, 244, 236, 0.7);
+  padding: 12px 0;
+  border-top: 1px dashed var(--line-dark);
+}
+
+.bp-list li:first-child {
+  border-top: none;
+}
+
+.bp-list li i {
+  color: var(--paper);
+  margin-top: 4px;
+  font-size: 14px;
+  flex-shrink: 0;
+  animation: arrowWave 1.8s ease-in-out infinite;
+}
+
+.bp-list li:nth-child(1) i { animation-delay: 0s; }
+.bp-list li:nth-child(2) i { animation-delay: 0.15s; }
+.bp-list li:nth-child(3) i { animation-delay: 0.3s; }
+.bp-list li:nth-child(4) i { animation-delay: 0.45s; }
+.bp-list li:nth-child(5) i { animation-delay: 0.6s; }
+
+@keyframes arrowWave {
+  0%, 100% { transform: translateX(0); opacity: 0.75; }
+  50% { transform: translateX(6px); opacity: 1; }
+}
+
+/* ---- Company Strength ---- */
+.capabilities {
+  background: var(--paper);
+  padding: 90px 0;
+}
+
+.capabilities-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.capabilities-grid h2 {
+  font-size: 2.2rem;
+  margin-bottom: 24px;
+}
+
+.capabilities-grid p {
+  color: var(--charcoal-soft);
+  font-size: 16.5px;
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.why-item {
+  background: var(--plaster);
+  padding: 20px 24px;
+  font-size: 14.5px;
+}
+
+.why-item .mono {
+  color: var(--logo-red);
+  margin-right: 8px;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 980px) {
+  .about-inner,
+  .blueprint-grid,
+  .capabilities-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .blueprint {
+    padding: 70px 0;
+  }
+
+  .capabilities {
+    padding: 60px 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .about {
+    padding: 40px 0 60px;
+  }
+
+  .blueprint-card {
+    padding: 28px 20px;
+  }
+
+  .figure-frame {
+    padding: 24px 20px;
+  }
+}

@@ -1,0 +1,245 @@
+/* ===================================================================
+   SERVICES PAGE — services.css
+   Styles specific to services.html
+=================================================================== */
+
+/* ---- Hero ---- */
+.hero.sub-hero.bg-services {
+  background-image: url("../images/img2.jpeg");
+}
+
+/* ---- Services Detail Section ---- */
+.services-detail {
+  padding: 80px 0 100px;
+}
+
+.services-detail-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Each service row: image + text side by side */
+.service-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  border-bottom: 1px solid var(--line);
+  overflow: hidden;
+}
+
+/* Image side */
+.service-row-image {
+  position: relative;
+  min-height: 420px;
+  overflow: hidden;
+}
+
+.service-row-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.service-row-image:hover img {
+  transform: scale(1.04);
+}
+
+.service-row-badge {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: var(--logo-red);
+  color: #fff;
+  font-family: var(--f-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+}
+
+.service-row-badge.right {
+  left: auto;
+  right: 20px;
+}
+
+/* Text side — light */
+.service-row-text {
+  padding: 56px 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.service-row-text h3 {
+  font-size: 2rem;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.service-row-text p {
+  font-size: 15.5px;
+  color: var(--charcoal-soft);
+  margin-bottom: 24px;
+  line-height: 1.7;
+}
+
+.service-row-text ul {
+  line-height: 2.1;
+  font-size: 14px;
+  color: var(--charcoal-soft);
+  list-style: none;
+  padding: 0;
+}
+
+.service-row-text li {
+  border-left: 3px solid var(--logo-red);
+  padding-left: 14px;
+  margin-bottom: 10px;
+}
+
+.service-row-text li:last-child {
+  margin-bottom: 0;
+}
+
+/* Text side — dark (for inverted rows) */
+.service-row-text.dark {
+  background: var(--charcoal);
+  color: var(--paper);
+}
+
+.service-row-text.dark h3 {
+  color: var(--paper);
+}
+
+.service-row-text.dark p {
+  color: rgba(247, 244, 236, 0.75);
+}
+
+.service-row-text.dark ul {
+  color: rgba(247, 244, 236, 0.7);
+}
+
+.service-row-text.dark li strong {
+  color: var(--paper);
+}
+
+/* Authority Compliance block */
+.authority-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  overflow: hidden;
+}
+
+.authority-image {
+  position: relative;
+  min-height: 280px;
+  overflow: hidden;
+}
+
+.authority-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.authority-image-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(22, 24, 26, 0.55);
+}
+
+.authority-image-text {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.authority-image-text p {
+  color: var(--paper);
+  font-family: var(--f-display);
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-align: center;
+  max-width: 20ch;
+  line-height: 1.3;
+  padding: 0 24px;
+}
+
+.authority-text {
+  background: var(--plaster);
+  padding: 48px;
+}
+
+.authority-text h4 {
+  font-family: var(--f-display);
+  font-size: 1.4rem;
+  margin-bottom: 16px;
+}
+
+.authority-text p {
+  font-size: 14.5px;
+  color: var(--charcoal-soft);
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+.authority-checklist {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.authority-checklist ul {
+  font-size: 13.5px;
+  line-height: 2.2;
+  color: var(--charcoal-soft);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 980px) {
+  .service-row,
+  .authority-block {
+    grid-template-columns: 1fr;
+  }
+
+  .service-row-image {
+    min-height: 280px;
+  }
+
+  .service-row-text {
+    padding: 36px 28px;
+  }
+
+  /* On mobile, dark text rows: put text first */
+  .service-row .service-row-text.dark {
+    order: -1;
+  }
+}
+
+@media (max-width: 640px) {
+  .services-detail {
+    padding: 40px 0 60px;
+  }
+
+  .service-row-text {
+    padding: 28px 20px;
+  }
+
+  .authority-text {
+    padding: 28px 20px;
+  }
+
+  .authority-checklist {
+    grid-template-columns: 1fr;
+  }
+}

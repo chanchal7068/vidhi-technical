@@ -1,0 +1,189 @@
+/* ===================================================================
+   COMPANY PROFILE PAGE — company-profile.css
+   Styles specific to company-profile.html
+=================================================================== */
+
+/* ---- Hero ---- */
+.hero.sub-hero.bg-profile {
+  background-image: url("../images/img8.jpeg");
+}
+
+/* ---- Profile Section ---- */
+.profile-section {
+  padding: 60px 0 100px;
+}
+
+.profile-inner {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 70px;
+  align-items: start;
+}
+
+/* Left column — text */
+.profile-text h2 {
+  font-size: clamp(1.8rem, 2.6vw, 2.5rem);
+  line-height: 1.18;
+  margin-bottom: 24px;
+}
+
+.profile-text p {
+  color: var(--charcoal-soft);
+  margin-bottom: 24px;
+  line-height: 1.7;
+}
+
+/* Document info card */
+.profile-doc-card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  padding: 32px;
+  margin-bottom: 32px;
+}
+
+.profile-doc-card h4 {
+  font-family: var(--f-mono);
+  font-size: 13px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  color: var(--logo-red-deep);
+}
+
+.profile-doc-card ul {
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--charcoal-soft);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.profile-doc-card li {
+  padding: 4px 0;
+}
+
+/* Right column — outline card (reuses blueprint-card styles) */
+.profile-outline-card {
+  background: var(--charcoal-2);
+  padding: 44px 40px;
+  position: relative;
+  color: var(--paper);
+  margin-top: 24px;
+}
+
+.profile-outline-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  color: var(--paper);
+}
+
+.profile-outline-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+}
+
+.profile-outline-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px 0;
+  border-top: 1px dashed var(--line-dark);
+  color: rgba(247, 244, 236, 0.7);
+  line-height: 1.5;
+}
+
+.profile-outline-list li:first-child {
+  border-top: none;
+}
+
+.profile-outline-card .bp-corner {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--logo-red-dark);
+}
+
+/* ---- Responsive ---- */
+/* ---- PDF Downloads Grid ---- */
+.pdf-downloads-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.pdf-card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  padding: 30px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 20px rgba(34, 31, 28, 0.02);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.pdf-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(34, 31, 28, 0.06);
+  border-color: var(--logo-red);
+}
+
+.pdf-card-icon {
+  font-size: 36px;
+  color: var(--logo-red);
+  margin-bottom: 20px;
+}
+
+.pdf-card h3 {
+  font-size: 1.15rem;
+  margin-bottom: 12px;
+  color: var(--charcoal);
+}
+
+.pdf-card p {
+  font-size: 13.5px;
+  color: var(--charcoal-soft);
+  line-height: 1.6;
+  margin-bottom: 24px;
+  flex-grow: 1;
+}
+
+.pdf-card .btn {
+  align-self: flex-start;
+  padding: 10px 20px;
+  font-size: 12.5px;
+}
+
+@media (max-width: 980px) {
+  .profile-inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .profile-outline-card {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .profile-section {
+    padding: 40px 0 60px;
+  }
+
+  .profile-doc-card,
+  .profile-outline-card {
+    padding: 24px 20px;
+  }
+  
+  .pdf-downloads-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
