@@ -52,14 +52,16 @@
 }
 
 .projects-table th {
-  padding: 16px 20px;
+  padding: 18px 20px;
   text-align: left;
   font-family: var(--f-mono);
-  font-size: 11px;
-  letter-spacing: 0.08em;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  font-weight: 500;
-  color: rgba(247, 244, 236, 0.5);
+  color: #ffffff;
+  background: var(--charcoal);
+  border-bottom: 2px solid var(--logo-red);
   white-space: nowrap;
 }
 
