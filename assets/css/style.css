@@ -1202,6 +1202,8 @@ em {
   padding: 120px 0;
   background: var(--charcoal);
   color: var(--paper);
+  margin-top: 60px; /* Clean gap above section */
+  border-top: 8px solid var(--paper); /* Bright clean separator border */
 }
 
 .blueprint .section-tag {
