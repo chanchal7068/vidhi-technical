@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
   if (header) {
     const onScroll = () => {
-      if (window.scrollY > 50) {
+      if (window.scrollY > 30) {
         header.classList.add("scrolled");
         if (isSubpage) {
           header.style.backgroundColor = "var(--paper)";
