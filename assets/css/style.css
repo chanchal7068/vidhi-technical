@@ -455,7 +455,7 @@ em {
 .hero.sub-hero.bg-services { background-image: url("../images/img2.jpeg"); }
 .hero.sub-hero.bg-projects { background-image: url("../images/img4.jpeg"); }
 .hero.sub-hero.bg-profile  { background-image: url("../images/img8.jpeg"); }
-.hero.sub-hero.bg-contact  { background-image: url("../images/img10.jpeg"); }
+.hero.sub-hero.bg-contact  { background-image: url("../images/contact.jpg"); background-position: center 75%; }
 
 .hero {
   position: relative;

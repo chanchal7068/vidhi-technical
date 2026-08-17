@@ -6,6 +6,7 @@
 /* ---- Hero ---- */
 .hero.sub-hero.bg-contact {
   background-image: url("../images/contact.jpg");
+  background-position: center 75%;
 }
 
 /* ---- Contact Section ---- */
